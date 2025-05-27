@@ -49,7 +49,6 @@
             margin-bottom: 10px;
             text-shadow: 0 3px 10px rgba(0, 0, 0, 0.09);
             letter-spacing: 2px;
-            animation: pop-in 1s;
         }
 
         .subtitle {
@@ -57,34 +56,6 @@
             font-weight: 400;
             opacity: 0.95;
             margin-bottom: 0;
-            animation: fade-in 1.6s;
-        }
-
-        @keyframes pop-in {
-            0% {
-                opacity: 0;
-                transform: scale(0.7);
-            }
-
-            80% {
-                opacity: 1;
-                transform: scale(1.07);
-            }
-
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        @keyframes fade-in {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
         }
 
         .container {
@@ -126,9 +97,6 @@
             width: 100%;
             margin-bottom: 0;
             text-align: center;
-            opacity: 1;
-            transform: none;
-            animation: none;
         }
 
         .sec-block:not(:first-child) {
@@ -167,7 +135,6 @@
             font-weight: 700;
         }
 
-        /* Selos de confiança */
         .selos {
             display: flex;
             justify-content: center;
@@ -196,7 +163,81 @@
             margin-right: 2px;
         }
 
-        /* Estoque/barra de progresso */
+        /* Carrossel */
+        .carousel-section {
+            width: 100%;
+            margin: 32px 0 0 0;
+            text-align: center;
+        }
+
+        .carousel-title {
+            color: var(--color-primary);
+            font-size: 1.13rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 440px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 3px 20px rgba(247, 82, 82, 0.07);
+            background: #fff8ee;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-img {
+            max-width: 99%;
+            max-height: 350px;
+            margin: 0 auto;
+            border-radius: 16px;
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            transition: opacity 0.6s;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-img.active {
+            opacity: 1;
+            position: relative;
+        }
+
+        .carousel-indicators {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 9px;
+        }
+
+        .carousel-dot {
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: #ffd36e;
+            opacity: 0.52;
+            border: none;
+            transition: opacity .15s, box-shadow .14s;
+            cursor: pointer;
+        }
+
+        .carousel-dot.active {
+            opacity: 1;
+            box-shadow: 0 2px 7px #ffd60099;
+        }
+
         .estoque-section {
             margin: 22px 0 12px 0;
             width: 100%;
@@ -263,7 +304,6 @@
             font-size: 1.33em;
         }
 
-        /* Feedback Section */
         .feedback-section {
             width: 100%;
             margin: 14px 0 0 0;
@@ -324,7 +364,6 @@
             margin-bottom: 0;
         }
 
-        /* SEÇÃO PREÇO e TIMER */
         .price-section {
             display: flex;
             flex-direction: column;
@@ -443,7 +482,6 @@
             font-size: 1.18em;
         }
 
-        /* FAQ Section */
         .faq-section {
             width: 100%;
             margin: 0 0 12px 0;
@@ -536,7 +574,6 @@
             margin: 0 auto 18px auto;
         }
 
-        /* Botão fixo mobile */
         .fixed-whatsapp-btn {
             display: none;
         }
@@ -621,6 +658,17 @@
                 height: 1.5em;
                 fill: #fff;
             }
+
+            .carousel-wrapper {
+                height: 340px;
+                max-width: 340px;
+            }
+
+            .carousel-img {
+                max-width: 99vw;
+                max-height: 340px;
+                object-fit: cover;
+            }
         }
     </style>
 </head>
@@ -633,69 +681,7 @@
     </header>
     <div class="container">
         <div class="sec-block">
-            <img src="WhatsApp Image 2025-05-27 at 11.05.11.jpeg" alt="Vaso junino de suculenta" class="img-produto">
-            <div class="sec-block">
-                <div class="sec-title">🎁 Detalhes do Produto</div>
-                <div class="details">
-                    - Vaso personalizado com tecido típico de São João, acabamento em renda e fita;<br>
-                    - Suculenta natural de fácil cuidado;<br>
-                    - Tamanho compacto e elegante (aprox. 8cm x 8cm);<br>
-                    - Ideal para presentear, decorar mesas, festas, escritórios e muito mais!
-                </div>
-            </div>
-            <div class="sec-block">
-                <div class="sec-title">✨ Por que ter este vasinho?</div>
-                <div class="diff">
-                    O Vasinho Junino com suculenta é <span class="highlight">mais que um presente</span>: é um gesto de
-                    carinho, tradição e alegria. Além de ser feito à mão, traz o clima das festas juninas para qualquer
-                    ambiente e transmite cuidado e exclusividade.
-                </div>
-            </div>
-            <div class="sec-block">
-                <div class="sec-title">🌟 Qualidade & Benefícios</div>
-                <div class="benefits">
-                    <ul class="benefit-list">
-                        <li>Produto 100% artesanal, feito com capricho;</li>
-                        <li>Suculenta natural e saudável, fácil de cuidar;</li>
-                        <li>Decoração exclusiva para festas e ambientes;</li>
-                        <li>Ótima opção de lembrancinha ou brinde corporativo;</li>
-                        <li>Presente que surpreende pela beleza e originalidade;</li>
-                        <li>Entrega rápida para a região.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="feedback-section sec-block">
-                <div class="feedback-title">😍 Veja o que nossos clientes dizem:</div>
-                <div class="feedback-list">
-                    <div class="feedback-card">
-                        <div class="feedback-stars">★★★★★</div>
-                        <div class="feedback-text">"Comprei para dar de lembrancinha na festa junina e todos amaram! O
-                            vaso
-                            é lindo e a suculenta veio perfeita."</div>
-                        <div class="feedback-author">— Marina S.</div>
-                    </div>
-                    <div class="feedback-card">
-                        <div class="feedback-stars">★★★★★</div>
-                        <div class="feedback-text">"Capricho em cada detalhe, entrega super rápida e um charme para
-                            minha
-                            mesa de trabalho. Recomendo demais!"</div>
-                        <div class="feedback-author">— Pedro H.</div>
-                    </div>
-                    <div class="feedback-card">
-                        <div class="feedback-stars">★★★★★</div>
-                        <div class="feedback-text">"Já é a segunda vez que compro! Produto maravilhoso, ótimo presente e
-                            dura bastante. Atendimento nota 10."</div>
-                        <div class="feedback-author">— Larissa F.</div>
-                    </div>
-                    <div class="feedback-card">
-                        <div class="feedback-stars">★★★★★</div>
-                        <div class="feedback-text">"Fiquei encantada com o cuidado e a originalidade. Trouxe alegria
-                            para
-                            minha casa e para quem recebeu de presente."</div>
-                        <div class="feedback-author">— Júlio V.</div>
-                    </div>
-                </div>
-            </div>
+            <img src="imagem.jpeg" alt="Vaso junino de suculenta" class="img-produto">
         </div>
         <div class="sec-block selos">
             <span class="selo"><i class="fa-solid fa-shield-halved"></i>Compra Segura</span>
@@ -716,6 +702,78 @@
             <span class="pagamento"><i class="fa-regular fa-credit-card"></i>Cartão</span>
             <span class="pagamento"><i class="fa-solid fa-money-bill-wave"></i>Dinheiro</span>
             <span class="pagamento"><i class="fa-solid fa-truck"></i>Pague na entrega</span>
+        </div>
+        <div class="sec-block">
+            <div class="sec-title">🎁 Detalhes do Produto</div>
+            <div class="details">
+                - Vaso personalizado com tecido típico de São João, acabamento em renda e fita;<br>
+                - Suculenta natural de fácil cuidado;<br>
+                - Tamanho compacto e elegante (aprox. 8cm x 8cm);<br>
+                - Ideal para presentear, decorar mesas, festas, escritórios e muito mais!
+            </div>
+        </div>
+        <div class="sec-block">
+            <div class="sec-title">✨ Por que ter este vasinho?</div>
+            <div class="diff">
+                O Vasinho Junino com suculenta é <span class="highlight">mais que um presente</span>: é um gesto de
+                carinho, tradição e alegria. Além de ser feito à mão, traz o clima das festas juninas para qualquer
+                ambiente e transmite cuidado e exclusividade.
+            </div>
+        </div>
+        <div class="sec-block">
+            <div class="sec-title">🌟 Qualidade & Benefícios</div>
+            <div class="benefits">
+                <ul class="benefit-list">
+                    <li>Produto 100% artesanal, feito com capricho;</li>
+                    <li>Suculenta natural e saudável, fácil de cuidar;</li>
+                    <li>Decoração exclusiva para festas e ambientes;</li>
+                    <li>Ótima opção de lembrancinha ou brinde corporativo;</li>
+                    <li>Presente que surpreende pela beleza e originalidade;</li>
+                    <li>Entrega rápida para a região.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Carousel Section -->
+        <div class="carousel-section sec-block">
+            <div class="carousel-title">Veja como fica o vasinho na sua casa:</div>
+            <div class="carousel-wrapper" id="carousel-wrapper">
+                <img src="imagem1.jpg" alt="Exemplo 1" class="carousel-img active">
+                <img src="imagem2.jpg" alt="Exemplo 2" class="carousel-img">
+            </div>
+            <div class="carousel-indicators">
+                <button class="carousel-dot active" aria-label="Imagem 1"></button>
+                <button class="carousel-dot" aria-label="Imagem 2"></button>
+            </div>
+        </div>
+        <!-- Feedback/Depoimentos Section -->
+        <div class="feedback-section sec-block">
+            <div class="feedback-title">😍 Veja o que nossos clientes dizem:</div>
+            <div class="feedback-list">
+                <div class="feedback-card">
+                    <div class="feedback-stars">★★★★★</div>
+                    <div class="feedback-text">"Comprei para dar de lembrancinha na festa junina e todos amaram! O vaso
+                        é lindo e a suculenta veio perfeita."</div>
+                    <div class="feedback-author">— Marina S.</div>
+                </div>
+                <div class="feedback-card">
+                    <div class="feedback-stars">★★★★★</div>
+                    <div class="feedback-text">"Capricho em cada detalhe, entrega super rápida e um charme para minha
+                        mesa de trabalho. Recomendo demais!"</div>
+                    <div class="feedback-author">— Pedro H.</div>
+                </div>
+                <div class="feedback-card">
+                    <div class="feedback-stars">★★★★★</div>
+                    <div class="feedback-text">"Já é a segunda vez que compro! Produto maravilhoso, ótimo presente e
+                        dura bastante. Atendimento nota 10."</div>
+                    <div class="feedback-author">— Larissa F.</div>
+                </div>
+                <div class="feedback-card">
+                    <div class="feedback-stars">★★★★★</div>
+                    <div class="feedback-text">"Fiquei encantada com o cuidado e a originalidade. Trouxe alegria para
+                        minha casa e para quem recebeu de presente."</div>
+                    <div class="feedback-author">— Júlio V.</div>
+                </div>
+            </div>
         </div>
         <div class="sec-block price-section">
             <div class="price-label">Valor promocional de lançamento:</div>
@@ -877,6 +935,30 @@
             );
             window.open('https://wa.me/?text=' + msg, '_blank');
         };
+
+        // Carrossel de imagens
+        const carouselImgs = document.querySelectorAll('.carousel-img');
+        const carouselDots = document.querySelectorAll('.carousel-dot');
+        let carouselIndex = 0;
+        function showCarousel(idx) {
+            carouselImgs.forEach((img, i) => {
+                img.classList.toggle('active', i === idx);
+                carouselDots[i].classList.toggle('active', i === idx);
+            });
+        }
+        function nextCarousel() {
+            carouselIndex = (carouselIndex + 1) % carouselImgs.length;
+            showCarousel(carouselIndex);
+        }
+        carouselDots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                carouselIndex = i;
+                showCarousel(carouselIndex);
+            });
+        });
+        setInterval(nextCarousel, 2000);
+        showCarousel(carouselIndex);
+
     </script>
 </body>
 
