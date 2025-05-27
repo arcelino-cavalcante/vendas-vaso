@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>🌵 Vasinho Junino de Suculenta - O Presente Perfeito para o São João!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --color-primary: #f75252;
+            --color-secondary: #ffefbf;
+            --color-green: #11c964;
+            --color-bg: #f9f5f2;
+            --color-white: #fff;
+            --color-dark: #292929;
+            --color-gold: #e8b324;
+            --color-bar: #fbd444;
+            --color-bar-bg: #fff6ce;
+            --shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+            --star: #ffd600;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--color-bg);
+            font-family: 'Montserrat', Arial, sans-serif;
+            color: var(--color-dark);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(90deg, var(--color-primary), var(--color-gold));
+            color: var(--color-white);
+            padding: 40px 0 30px 0;
+            text-align: center;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+        }
+
+        .headline {
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 3px 10px rgba(0, 0, 0, 0.09);
+            letter-spacing: 2px;
+            animation: pop-in 1s;
+        }
+
+        .subtitle {
+            font-size: 1.13rem;
+            font-weight: 400;
+            opacity: 0.95;
+            margin-bottom: 0;
+            animation: fade-in 1.6s;
+        }
+
+        @keyframes pop-in {
+            0% {
+                opacity: 0;
+                transform: scale(0.7);
+            }
+
+            80% {
+                opacity: 1;
+                transform: scale(1.07);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            max-width: 580px;
+            margin: 32px auto 0 auto;
+            background: var(--color-white);
+            box-shadow: 0 3px 20px rgba(247, 82, 82, 0.09);
+            border-radius: 22px;
+            padding: 38px 22px 36px 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 42px;
+        }
+
+        .img-produto {
+            max-width: 360px;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 6px 32px rgba(247, 82, 82, 0.13), 0 1.5px 10px rgba(232, 179, 36, 0.11);
+            border: 6px solid #fff8ee;
+            background: #fff8ee;
+            margin: 0 auto;
+            display: block;
+            animation: pulseimg 2.2s infinite alternate;
+        }
+
+        @keyframes pulseimg {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.018);
+            }
+        }
+
+        .sec-block {
+            width: 100%;
+            margin-bottom: 0;
+            text-align: center;
+            opacity: 1;
+            transform: none;
+            animation: none;
+        }
+
+        .sec-block:not(:first-child) {
+            margin-top: 34px;
+        }
+
+        .sec-title {
+            color: var(--color-primary);
+            font-size: 1.18rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .details,
+        .diff,
+        .benefits {
+            font-size: 1.12rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+            color: #444;
+        }
+
+        .benefit-list {
+            margin: 14px 0 0 0;
+            padding: 0 0 0 20px;
+            font-size: 1.07rem;
+            line-height: 1.7;
+            color: #388e3c;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .highlight {
+            color: var(--color-gold);
+            font-weight: 700;
+        }
+
+        /* Selos de confiança */
+        .selos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin: 14px 0 18px 0;
+        }
+
+        .selo {
+            background: #f9f9f9;
+            border-radius: 13px;
+            box-shadow: 0 2px 8px rgba(232, 179, 36, 0.06);
+            color: #c67906;
+            display: flex;
+            align-items: center;
+            font-size: 1.09rem;
+            font-weight: 600;
+            gap: 8px;
+            padding: 11px 17px 10px 13px;
+            border: 1.5px solid #fff2c3;
+            letter-spacing: 0.5px;
+        }
+
+        .selo i {
+            font-size: 1.22em;
+            margin-right: 2px;
+        }
+
+        /* Estoque/barra de progresso */
+        .estoque-section {
+            margin: 22px 0 12px 0;
+            width: 100%;
+            text-align: center;
+            display: block;
+        }
+
+        .estoque-label {
+            font-size: 1.19rem;
+            font-weight: 700;
+            color: #d69302;
+            margin-bottom: 8px;
+            letter-spacing: 0.7px;
+        }
+
+        .estoque-bar-bg {
+            width: 93%;
+            margin: 0 auto 0 auto;
+            background: var(--color-bar-bg);
+            border-radius: 11px;
+            height: 20px;
+            box-shadow: 0 2px 10px rgba(251, 212, 68, 0.06);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .estoque-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--color-bar), #eabf2a 80%);
+            border-radius: 11px 0 0 11px;
+            transition: width .9s cubic-bezier(.36, .06, .23, .97);
+        }
+
+        .estoque-value {
+            font-size: 1.07rem;
+            color: #be8809;
+            font-weight: 700;
+            margin-top: 6px;
+        }
+
+        .pagamentos {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin: 22px 0 12px 0;
+            flex-wrap: wrap;
+        }
+
+        .pagamento {
+            background: #f7f7fa;
+            color: #247314;
+            font-size: 1.22rem;
+            font-weight: 700;
+            padding: 11px 19px 10px 15px;
+            border-radius: 12px;
+            border: 1.5px solid #d4eed8;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pagamento i {
+            font-size: 1.33em;
+        }
+
+        /* Feedback Section */
+        .feedback-section {
+            width: 100%;
+            margin: 14px 0 0 0;
+            text-align: center;
+        }
+
+        .feedback-title {
+            color: var(--color-primary);
+            font-size: 1.14rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+
+        .feedback-list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        .feedback-card {
+            background: #fffbe8;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(232, 179, 36, 0.07);
+            padding: 18px 14px 14px 14px;
+            min-width: 118px;
+            max-width: 220px;
+            flex: 1 1 190px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .feedback-stars {
+            color: var(--star);
+            font-size: 1.13rem;
+            margin-bottom: 4px;
+            letter-spacing: 1.2px;
+        }
+
+        .feedback-text {
+            font-size: 0.99rem;
+            color: #6b4c0f;
+            margin-bottom: 10px;
+            min-height: 54px;
+        }
+
+        .feedback-author {
+            font-size: 0.96rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-top: auto;
+            margin-bottom: 0;
+        }
+
+        /* SEÇÃO PREÇO e TIMER */
+        .price-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 26px;
+            margin-bottom: 18px;
+            width: 100%;
+            padding: 26px 0 20px 0;
+            background: #fff3e3;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(250, 184, 72, 0.10);
+        }
+
+        .price-label {
+            color: #333;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 14px;
+        }
+
+        .price {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--color-green);
+            letter-spacing: 1.6px;
+            text-shadow: 0 4px 20px rgba(17, 201, 100, 0.13);
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .timer {
+            font-size: 1.17rem;
+            color: var(--color-primary);
+            font-weight: 700;
+            margin: 0 0 18px 0;
+            background: #fff2e6;
+            padding: 12px 28px;
+            border-radius: 14px;
+            display: inline-block;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 8px rgba(247, 82, 82, 0.09);
+        }
+
+        .buy-btn {
+            background: linear-gradient(90deg, var(--color-primary), var(--color-green));
+            color: var(--color-white);
+            font-size: 1.32rem;
+            font-weight: 700;
+            border: none;
+            padding: 18px 60px;
+            border-radius: 36px;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(17, 201, 100, 0.09);
+            transition: transform 0.17s, box-shadow 0.17s, filter 0.17s;
+            outline: none;
+            margin-bottom: 15px;
+            filter: brightness(0.99);
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            justify-content: center;
+        }
+
+        .buy-btn i {
+            font-size: 1.4em;
+        }
+
+        .buy-btn:hover,
+        .buy-btn:focus {
+            transform: scale(1.04);
+            box-shadow: 0 8px 34px rgba(17, 201, 100, 0.12);
+            filter: brightness(1.09);
+        }
+
+        .share-section {
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        .share-btn {
+            background: linear-gradient(90deg, var(--color-green), var(--color-gold));
+            color: var(--color-white);
+            font-size: 1.07rem;
+            font-weight: 700;
+            border: none;
+            padding: 12px 23px;
+            border-radius: 22px;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(247, 82, 82, 0.05);
+            outline: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 4px;
+            transition: background .14s, filter .15s;
+        }
+
+        .share-btn:hover {
+            filter: brightness(1.08);
+        }
+
+        .share-btn i {
+            font-size: 1.18em;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            width: 100%;
+            margin: 0 0 12px 0;
+            text-align: center;
+        }
+
+        .faq-title {
+            color: var(--color-primary);
+            font-size: 1.13rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+            letter-spacing: 1px;
+        }
+
+        .faq-list {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+            align-items: center;
+        }
+
+        .faq-item {
+            background: #f7faf6;
+            border-radius: 14px;
+            box-shadow: 0 1.5px 7px rgba(17, 201, 100, 0.07);
+            width: 100%;
+            max-width: 480px;
+            text-align: left;
+            cursor: pointer;
+            transition: box-shadow .18s, background .34s;
+            border: 1.5px solid #e1eadf;
+        }
+
+        .faq-question {
+            padding: 17px 23px;
+            font-size: 1.07rem;
+            font-weight: 700;
+            color: var(--color-green);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+            transition: background .19s;
+        }
+
+        .faq-item.active .faq-question {
+            background: #e6ffe9;
+        }
+
+        .faq-toggle {
+            font-size: 1.28rem;
+            color: #aaa;
+            margin-left: 10px;
+            transition: transform .2s;
+        }
+
+        .faq-item.active .faq-toggle {
+            color: var(--color-primary);
+            transform: rotate(90deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .38s cubic-bezier(.76, 0, .24, 1), padding .22s;
+            background: #fbfffa;
+            padding: 0 23px;
+            font-size: 1.01rem;
+            color: #555;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 15px 23px 18px 23px;
+            max-height: 300px;
+            margin-top: -8px;
+            animation: fade-in .5s;
+        }
+
+        .footer {
+            text-align: center;
+            background: #fff4d0;
+            padding: 20px 10px 18px 10px;
+            font-size: 1.09rem;
+            color: #666;
+            letter-spacing: 0.2px;
+            border-radius: 0 0 22px 22px;
+            max-width: 580px;
+            margin: 0 auto 18px auto;
+        }
+
+        /* Botão fixo mobile */
+        .fixed-whatsapp-btn {
+            display: none;
+        }
+
+        @media (max-width: 650px) {
+            .container {
+                padding: 12px 1vw 18px 1vw;
+                max-width: 100vw;
+            }
+
+            .img-produto {
+                max-width: 97vw;
+            }
+
+            .sec-title {
+                font-size: 1rem;
+            }
+
+            .price {
+                font-size: 1.2rem;
+            }
+
+            .price-section {
+                padding: 18px 0 13px 0;
+            }
+
+            .buy-btn {
+                font-size: 1.08rem;
+                padding: 13px 0;
+                width: 100%;
+            }
+
+            .benefit-list {
+                padding-left: 12px;
+            }
+
+            .footer {
+                font-size: 0.97rem;
+            }
+
+            .feedback-list {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .feedback-card {
+                max-width: 99vw;
+            }
+
+            .faq-item {
+                max-width: 99vw;
+            }
+
+            .fixed-whatsapp-btn {
+                display: flex;
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 50;
+                background: linear-gradient(90deg, #f75252, #11c964);
+                color: #fff;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.18rem;
+                font-weight: 700;
+                padding: 17px 0 15px 0;
+                box-shadow: 0 -2px 22px rgba(17, 201, 100, 0.08);
+                border-radius: 0;
+                border-top-left-radius: 18px;
+                border-top-right-radius: 18px;
+                transition: filter .14s;
+            }
+
+            .fixed-whatsapp-btn:active {
+                filter: brightness(0.92);
+            }
+
+            .fixed-whatsapp-btn svg {
+                margin-right: 10px;
+                width: 1.5em;
+                height: 1.5em;
+                fill: #fff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="headline">🌵 Vasinho Junino com Suculenta</div>
+        <div class="subtitle">Deixe seu São João ainda mais especial com um presente original, artesanal e cheio de
+            vida!</div>
+    </header>
+    <div class="container">
+        <div class="sec-block">
+            <img src="WhatsApp Image 2025-05-27 at 11.05.11.jpeg" alt="Vaso junino de suculenta" class="img-produto">
+            <div class="sec-block">
+                <div class="sec-title">🎁 Detalhes do Produto</div>
+                <div class="details">
+                    - Vaso personalizado com tecido típico de São João, acabamento em renda e fita;<br>
+                    - Suculenta natural de fácil cuidado;<br>
+                    - Tamanho compacto e elegante (aprox. 8cm x 8cm);<br>
+                    - Ideal para presentear, decorar mesas, festas, escritórios e muito mais!
+                </div>
+            </div>
+            <div class="sec-block">
+                <div class="sec-title">✨ Por que ter este vasinho?</div>
+                <div class="diff">
+                    O Vasinho Junino com suculenta é <span class="highlight">mais que um presente</span>: é um gesto de
+                    carinho, tradição e alegria. Além de ser feito à mão, traz o clima das festas juninas para qualquer
+                    ambiente e transmite cuidado e exclusividade.
+                </div>
+            </div>
+            <div class="sec-block">
+                <div class="sec-title">🌟 Qualidade & Benefícios</div>
+                <div class="benefits">
+                    <ul class="benefit-list">
+                        <li>Produto 100% artesanal, feito com capricho;</li>
+                        <li>Suculenta natural e saudável, fácil de cuidar;</li>
+                        <li>Decoração exclusiva para festas e ambientes;</li>
+                        <li>Ótima opção de lembrancinha ou brinde corporativo;</li>
+                        <li>Presente que surpreende pela beleza e originalidade;</li>
+                        <li>Entrega rápida para a região.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="feedback-section sec-block">
+                <div class="feedback-title">😍 Veja o que nossos clientes dizem:</div>
+                <div class="feedback-list">
+                    <div class="feedback-card">
+                        <div class="feedback-stars">★★★★★</div>
+                        <div class="feedback-text">"Comprei para dar de lembrancinha na festa junina e todos amaram! O
+                            vaso
+                            é lindo e a suculenta veio perfeita."</div>
+                        <div class="feedback-author">— Marina S.</div>
+                    </div>
+                    <div class="feedback-card">
+                        <div class="feedback-stars">★★★★★</div>
+                        <div class="feedback-text">"Capricho em cada detalhe, entrega super rápida e um charme para
+                            minha
+                            mesa de trabalho. Recomendo demais!"</div>
+                        <div class="feedback-author">— Pedro H.</div>
+                    </div>
+                    <div class="feedback-card">
+                        <div class="feedback-stars">★★★★★</div>
+                        <div class="feedback-text">"Já é a segunda vez que compro! Produto maravilhoso, ótimo presente e
+                            dura bastante. Atendimento nota 10."</div>
+                        <div class="feedback-author">— Larissa F.</div>
+                    </div>
+                    <div class="feedback-card">
+                        <div class="feedback-stars">★★★★★</div>
+                        <div class="feedback-text">"Fiquei encantada com o cuidado e a originalidade. Trouxe alegria
+                            para
+                            minha casa e para quem recebeu de presente."</div>
+                        <div class="feedback-author">— Júlio V.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec-block selos">
+            <span class="selo"><i class="fa-solid fa-shield-halved"></i>Compra Segura</span>
+            <span class="selo"><i class="fa-solid fa-truck-fast"></i>Entrega Garantida</span>
+            <span class="selo"><i class="fa-solid fa-hand-sparkles"></i>Produto Artesanal</span>
+            <span class="selo"><i class="fa-solid fa-face-laugh-beam"></i>Satisfação Garantida</span>
+        </div>
+        <div class="sec-block estoque-section">
+            <div class="estoque-label"><i class="fa-solid fa-box-open"></i> Restam apenas <span
+                    id="estoque-value">8</span> unidades!</div>
+            <div class="estoque-bar-bg">
+                <div class="estoque-bar" id="estoque-bar" style="width: 27%"></div>
+            </div>
+            <div class="estoque-value" id="estoque-info"></div>
+        </div>
+        <div class="sec-block pagamentos">
+            <span class="pagamento"><i class="fa-brands fa-pix"></i>Pix</span>
+            <span class="pagamento"><i class="fa-regular fa-credit-card"></i>Cartão</span>
+            <span class="pagamento"><i class="fa-solid fa-money-bill-wave"></i>Dinheiro</span>
+            <span class="pagamento"><i class="fa-solid fa-truck"></i>Pague na entrega</span>
+        </div>
+        <div class="sec-block price-section">
+            <div class="price-label">Valor promocional de lançamento:</div>
+            <div class="price">R$ 18,00</div>
+            <div class="timer" id="timerBox">Oferta válida por: <span id="timer"></span></div>
+            <button class="buy-btn" id="whatsBtn">
+                <i class="fa-brands fa-whatsapp"></i>
+                Comprar agora pelo WhatsApp
+            </button>
+            <div class="share-section">
+                <button class="share-btn" id="shareBtn">
+                    <i class="fa-solid fa-share-nodes"></i> Indique para um amigo!
+                </button>
+            </div>
+        </div>
+        <!-- FAQ Section -->
+        <div class="faq-section sec-block">
+            <div class="faq-title">❓ Perguntas Frequentes</div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">1. Como cuidar da suculenta?
+                        <span class="faq-toggle">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        Suculentas gostam de luz indireta e pouca água! Regue apenas quando o solo estiver completamente
+                        seco, normalmente uma vez a cada 7-10 dias. Evite molhar as folhas, use um borrifador ou regue
+                        diretamente na terra. Não deixe água acumulada no fundo do vaso. Com esses cuidados, sua
+                        suculenta ficará linda por muito tempo!
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">2. Ela dura muito tempo?
+                        <span class="faq-toggle">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        Sim! Suculentas são conhecidas pela resistência e longa durabilidade, mesmo com poucos cuidados.
+                        Seguindo as dicas de rega e luz, ela pode durar meses ou até anos, trazendo vida e beleza ao seu
+                        ambiente.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">3. Como eu compro?
+                        <span class="faq-toggle">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        Assim como o calor de um forró junino, a compra é feita exclusivamente pelo WhatsApp do
+                        vendedor! Lá você pode tirar dúvidas, negociar pagamento e escolher a melhor forma de entrega.
+                        Atendimento pessoal, rápido e seguro!
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">4. Como funciona a entrega?
+                        <span class="faq-toggle">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        Após conversar pelo WhatsApp, você combina a melhor forma de entrega diretamente com o vendedor,
+                        escolhendo local, dia e horário que melhor atendam você!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BOTÃO FIXO MOBILE -->
+    <button class="fixed-whatsapp-btn" id="fixedWhatsBtn" style="display:none;">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M20.52 3.482A11.88 11.88 0 0012 0C5.373 0 0 5.373 0 12c0 2.11.552 4.163 1.594 5.977L.037 23.194a1.072 1.072 0 001.38 1.381l5.219-1.554A11.958 11.958 0 0012 24c6.627 0 12-5.373 12-12a11.877 11.877 0 00-3.48-8.518zm-8.52 19.018a9.99 9.99 0 01-5.126-1.411l-.367-.221-3.096.923.924-3.097-.22-.367A10.04 10.04 0 012 12C2 6.486 6.486 2 12 2c2.462 0 4.779.905 6.584 2.548A9.974 9.974 0 0122 12c0 5.514-4.486 10-10 10zm6.466-7.99l-2.606-2.61a1.058 1.058 0 00-1.497 0l-.965.966a7.048 7.048 0 01-3.708-3.709l.966-.965a1.058 1.058 0 000-1.497l-2.61-2.606a1.058 1.058 0 00-1.497 0l-.799.798c-.823.823-.93 2.12-.314 3.027 2.033 3.01 5.053 5.03 8.062 7.063.907.616 2.204.509 3.027-.314l.798-.799a1.058 1.058 0 000-1.497z" />
+        </svg>
+        Comprar agora pelo WhatsApp
+    </button>
+    <footer class="footer">
+        🌼 Aproveite! Produção limitada para a temporada junina. Garanta já o seu vasinho artesanal e surpreenda quem
+        você ama! 🌼
+    </footer>
+    <script>
+        // WHATSAPP botão
+        function abrirWhatsapp() {
+            const msg = encodeURIComponent(
+                "Olá! Quero garantir meu Vasinho Junino com suculenta 🌵 que vi na página. Pode me passar detalhes sobre a entrega?"
+            );
+            // Substitua pelo seu número real de WhatsApp!
+            window.open('https://wa.me/5599999999999?text=' + msg, '_blank');
+        }
+        document.getElementById('whatsBtn').onclick = abrirWhatsapp;
+        document.getElementById('fixedWhatsBtn').onclick = abrirWhatsapp;
+
+        // FAQ accordion com animação
+        document.querySelectorAll('.faq-item').forEach(function (item) {
+            item.addEventListener('click', function () {
+                if (item.classList.contains('active')) {
+                    item.classList.remove('active');
+                } else {
+                    document.querySelectorAll('.faq-item').forEach(function (i) {
+                        i.classList.remove('active');
+                    });
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // BOTÃO FIXO MOBILE
+        function toggleFixedBtn() {
+            var btn = document.getElementById('fixedWhatsBtn');
+            if (window.innerWidth <= 650) {
+                btn.style.display = "flex";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+        toggleFixedBtn();
+        window.addEventListener('resize', toggleFixedBtn);
+
+        // TIMER URGÊNCIA (exemplo: 2 dias a partir de agora)
+        function startCountdown() {
+            var now = new Date();
+            var future = new Date(now.getTime() + 2 * 24 * 60 * 60 * 1000);
+            function pad(v) { return v < 10 ? '0' + v : v; }
+            function update() {
+                var now2 = new Date();
+                var dist = future - now2;
+                if (dist < 0) {
+                    document.getElementById('timerBox').innerHTML = "Oferta encerrada!";
+                    return;
+                }
+                var d = Math.floor(dist / (1000 * 60 * 60 * 24));
+                var h = Math.floor((dist / (1000 * 60 * 60)) % 24);
+                var m = Math.floor((dist / (1000 * 60)) % 60);
+                var s = Math.floor((dist / 1000) % 60);
+                document.getElementById('timer').textContent =
+                    (d > 0 ? d + 'd ' : '') + pad(h) + 'h ' + pad(m) + 'm ' + pad(s) + 's';
+                setTimeout(update, 1000);
+            }
+            update();
+        }
+        startCountdown();
+
+        // ESTOQUE (barra de progresso dinâmica)
+        const estoqueTotal = 30; // total disponível
+        let estoqueRestante = 8; // unidades restantes - altere conforme quiser
+        function renderEstoque() {
+            document.getElementById("estoque-value").textContent = estoqueRestante;
+            let porc = Math.round((estoqueRestante / estoqueTotal) * 100);
+            porc = porc > 100 ? 100 : (porc < 4 ? 4 : porc); // nunca some a barra
+            document.getElementById("estoque-bar").style.width = porc + "%";
+            document.getElementById("estoque-info").textContent =
+                estoqueRestante <= 5
+                    ? "Últimas unidades! Garanta já o seu."
+                    : estoqueRestante <= 10
+                        ? "Poucas unidades restantes."
+                        : "";
+        }
+        renderEstoque();
+
+        // BOTÃO DE COMPARTILHAR/INDICAR AMIGO
+        document.getElementById('shareBtn').onclick = function () {
+            var url = window.location.href;
+            var msg = encodeURIComponent(
+                "Olha esse presente criativo de São João que encontrei: Vasinho Junino com suculenta! Dá uma olhada: " + url
+            );
+            window.open('https://wa.me/?text=' + msg, '_blank');
+        };
+    </script>
+</body>
+
+</html>
